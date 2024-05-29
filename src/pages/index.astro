@@ -1,0 +1,38 @@
+---
+import Banner from '../components/Banner.astro';
+import Cards from '../components/Cards.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ArcusCode">
+	<Banner />
+	<main>
+		<a href="posts/post-1">Primera postulacion</a>
+		<div class="max-w-7xl mx-auto py-5 flex justify-center ">
+			<h2 class="relative font-extrabold text-center text-xl before:absolute before:w-24 before:-bottom-2 before:right-9  before:h-1  before:bg-amber-500">Ultimos Articulos</h2>
+		</div>
+		<div class="max-w-3xl mx-auto py-5 grid grid-cols-3 justify-items-center">
+            <Cards
+			   src="/public/images/post-1.jpg"
+			   title="Mi primer post sobre javascript"
+			   tags = "Tecnologia"
+			   ImageAuthor = "/public/images/author.jpg"
+			   NameAuthor = "Andrea Castañeda"
+			/>  
+			<Cards
+			src="/public/images/post-1.jpg"
+			title="Mi primer post sobre javascript"
+			tags = "Tecnologia"
+			ImageAuthor = "/public/images/author.jpg"
+			NameAuthor = "Andrea Castañeda"
+		    />  
+		    <Cards
+			   src="/public/images/post-1.jpg"
+			   title="Mi primer post sobre javascript"
+			   tags = "Tecnologia"
+			   ImageAuthor = "/public/images/author.jpg"
+			   NameAuthor = "Andrea Castañeda"
+			/>  
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,11 @@
+---
+import Layout from "./Layout.astro";
+
+  const {frontmatter} = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <h1>{frontmatter.title}</h1>
+    <p>Escrito por: {frontmatter.author}</p> - <span>Publicado {frontmatter.pubDate.slice(0,10)}</span>
+    <slot/>
+</Layout>
