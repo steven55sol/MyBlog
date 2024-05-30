@@ -3,8 +3,8 @@ layout: ../../layouts/ContainerPost.astro
 title: 'Mi primera publicación en el blog'
 pubDate: 2022-07-01
 author: "Andrea Castaneda"
-authorUrl: '../../public/Images/author.jpg'
-ImageUrl: '../../public/Images/post-1.jpg'
+authorUrl: '/assets/author.jpg'
+ImageUrl: '/assets/post-1.jpg'
 ImageAlt: 'El logotipo completo de Astro.'
 tags: "Tecnologia"
 ---
