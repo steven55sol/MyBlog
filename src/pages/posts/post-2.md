@@ -3,8 +3,8 @@ layout: ../../layouts/ContainerPost.astro
 title: 'Mi Segunda publicación en el blog'
 pubDate: 2022-07-01
 author: "Andrea Castaneda"
-authorUrl: '../../src/Images/author.jpg'
-ImageUrl: '../../src/Images/post-2.jpg'
+authorUrl: '../Images/author.jpg'
+ImageUrl: '../Images/post-2.jpg'
 ImageAlt: 'El logotipo completo de Astro.'
 tags: "Tecnologia"
 ---

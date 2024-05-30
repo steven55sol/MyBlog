@@ -14,7 +14,7 @@ const allPost = await Astro.glob('../pages/posts/*.md');
 		<div class="max-w-7xl mx-auto py-5 flex justify-center ">
 			<h2 class="relative font-extrabold text-center text-xl before:absolute before:w-24 before:-bottom-2 before:right-9  before:h-1  before:bg-amber-500">Ultimos Articulos</h2>
 		</div>
-		<div class="lg:max-w-3xl lg:mx-auto lg:grid lg:grid-cols-3 justify-items-center max-md:grid max-md:grid-cols-1 p-5">
+		<div class="md:max-w-3xl md:mx-auto md:grid md:grid-cols-3 justify-items-center max-md:grid max-md:grid-cols-1 p-5 gap-2">
                     
 			{
 				allPost.map(post => (
