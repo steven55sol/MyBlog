@@ -5,7 +5,16 @@ import Layout from "./Layout.astro";
 ---
 
 <Layout title={frontmatter.title}>
-    <h1>{frontmatter.title}</h1>
-    <p>Escrito por: {frontmatter.author}</p> - <span>Publicado {frontmatter.pubDate.slice(0,10)}</span>
-    <slot/>
+  <div class="max-w-4xl min-h-screen mx-auto px-5 p-0.5">        
+      <div class="mt-6 mb-6">
+        <a href="/">
+          <svg  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left w-8"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" />
+          </svg>
+        </a>
+      </div>
+      <img src={frontmatter.ImageUrl} alt={frontmatter.ImageAlt} class="h-80 w-full object-cover">
+      <h1 class="text-2xl font-extrabold font-Poppins">{frontmatter.title}</h1>
+      <p>Escrito por: {frontmatter.author}</p> - <span>Publicado {frontmatter.pubDate.slice(0,10)}</span>
+      <slot/>
+    </div>
 </Layout>
