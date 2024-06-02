@@ -2,11 +2,11 @@
  const {src,tags,title,Url,authorUrl,NameAuthor,ImageAlt} = Astro.props;
 ---
 
-<div class=" max-sm:w-full max-sm:flex-row max-sm:min-h-32 w-56 flex flex-col bg-white rounded-md shadow">
+<div class=" max-sm:w-full max-sm:flex-row max-sm:min-h-28 w-56 flex flex-col bg-white rounded-md shadow">
     <img 
        src={src} 
        alt={ImageAlt} 
-       class="max-sm:w-32 max-sm:h-auto max-sm:rounded-l-md w-full h-32 object-cover sm:rounded-t-md "
+       class="max-sm:w-28 max-sm:h-auto max-sm:rounded-l-md w-full h-32 object-cover sm:rounded-t-md "
     />
     <div class="p-3">
         <p class="text-sky-600 font-bold text-xs">{tags}</p>
