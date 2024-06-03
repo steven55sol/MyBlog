@@ -58,7 +58,7 @@ import Layout from "./Layout.astro";
          break;
       }
        case 'twiiter':{
-         window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(urlShare)}`, 'Compartir en Twitter', 'width=600,height=400');
+         window.open(`https://twitter.com/intent/tweet?original referer={encodeURIComponent(urlShare)}`, 'Compartir en Twitter', 'width=600,height=400');
          break;
         }
         case 'linkedin':{
@@ -68,6 +68,7 @@ import Layout from "./Layout.astro";
       }
   }
 
+  https://twitter.com/intent/tweet?original_referer={encodeURIComponent(urlShare)}"
 
 document.addEventListener('DOMContentLoaded',()=>{
 
