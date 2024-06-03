@@ -1,4 +1,5 @@
 ---
+import BtnShare from "../components/BtnShare.astro";
 import Layout from "./Layout.astro";
 
   const {frontmatter} = Astro.props;
@@ -6,13 +7,19 @@ import Layout from "./Layout.astro";
 
 <Layout title={frontmatter.title}>
   <div class="max-w-4xl min-h-screen mx-auto px-5 p-0.5 max-sm:px-3">        
-      <div class="mt-6 mb-6">
+      <div class="mt-6 mb-6 flex items-center justify-between">
         <div class="flex items-center w-20 p-2 rounded-md hover:border-slate-900 hover:bg-transparent hover:text-black border-2 bg-slate-900 text-white hover:cursor-pointer hover:transition hover:ease-in hover:duration-200">
-            <a href="/" class="flex items-center">
+          <a href="/" class="flex items-center">
             <svg  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left w-5"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" />
             </svg>
             <span class="font-bold text-sm">Atras</span>
           </a>
+        </div>
+        <div class="flex gap-2 items-center container-btn">
+          <p>Compartir:</p>
+           <BtnShare color = "bg-sky-800" clasebtn="icon-face" ruta = "/assets/icon_Face.svg"/>
+           <BtnShare color = "bg-black" clasebtn="icon-twitter" ruta = "/assets/icon_Twitter.svg" />
+           <BtnShare color = "bg-blue-600" clasebtn="icon-likedin" ruta = "/assets/icon_Linkedin.svg" />
         </div>
       </div>
 
@@ -32,3 +39,14 @@ import Layout from "./Layout.astro";
       </div>
     </div>
 </Layout>
+
+
+<script>
+  
+  const containerbtn = document.querySelector('.container-btn');
+  
+  containerbtn?.addEventListener('click', e=>{
+
+  })
+  
+</script>
