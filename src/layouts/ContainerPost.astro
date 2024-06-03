@@ -3,6 +3,7 @@ import BtnShare from "../components/BtnShare.astro";
 import Layout from "./Layout.astro";
 
   const {frontmatter} = Astro.props;
+
 ---
 
 <Layout title={frontmatter.title}>
@@ -40,13 +41,17 @@ import Layout from "./Layout.astro";
     </div>
 </Layout>
 
-
 <script>
-  
-  const containerbtn = document.querySelector('.container-btn');
-  
-  containerbtn?.addEventListener('click', e=>{
+  const btnFace = document.querySelector('.icon-face');
 
-  })
-  
+  const handleShare = ()=>{
+      const urlShare = window.location.href;
+
+      console.log(urlShare)
+
+      window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(urlShare)}`, 'Compartir en Facebook', 'width=600,height=400');
+  }
+
+  btnFace?.addEventListener('click', handleShare)
+
 </script>
