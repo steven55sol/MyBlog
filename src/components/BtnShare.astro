@@ -1,9 +1,9 @@
 ---
-  const {color,clasebtn,ruta} = Astro.props;
+  const {color,clasebtn,ruta, name} = Astro.props;
 
 ---
 
 
     <button class=`${color} ${clasebtn} p-1 rounded-sm`>
-        <img src={ruta} class="stroke-1"  alt="Icono de Redes Sociales">
+        <img src={ruta} class="stroke-1"  alt="Icono de Redes Sociales" data-name = {name}>
     </button>

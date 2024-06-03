@@ -4,6 +4,7 @@ import Layout from "./Layout.astro";
 
   const {frontmatter} = Astro.props;
 
+
 ---
 
 <Layout title={frontmatter.title}>
@@ -18,9 +19,9 @@ import Layout from "./Layout.astro";
         </div>
         <div class="flex gap-2 items-center container-btn">
           <p>Compartir:</p>
-           <BtnShare color = "bg-sky-800" clasebtn="icon-face" ruta = "/assets/icon_Face.svg"/>
-           <BtnShare color = "bg-black" clasebtn="icon-twitter" ruta = "/assets/icon_Twitter.svg" />
-           <BtnShare color = "bg-blue-600" clasebtn="icon-likedin" ruta = "/assets/icon_Linkedin.svg" />
+           <BtnShare color = "bg-sky-800" clasebtn="icon-redes" ruta = "/assets/icon_Face.svg" name="facebook" />
+           <BtnShare color = "bg-black" clasebtn="icon-redes" ruta = "/assets/icon_Twitter.svg" name="twitter" />
+           <BtnShare color = "bg-blue-600" clasebtn="icon-redes" ruta = "/assets/icon_Linkedin.svg" name="linkedin" />
         </div>
       </div>
 
@@ -42,16 +43,38 @@ import Layout from "./Layout.astro";
 </Layout>
 
 <script>
-  const btnFace = document.querySelector('.icon-face');
+  const iconRedes = document.querySelectorAll('.icon-redes');
 
-  const handleShare = ()=>{
-      const urlShare = window.location.href;
 
-      console.log(urlShare)
+  const handleClick = (e)=>{
+    const urlShare = window.location.href;
+    let name = e.target.dataset.name;
 
-      window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(urlShare)}`, 'Compartir en Facebook', 'width=600,height=400');
+    console.log(name)
+
+    switch(name){
+      case 'facebook':{
+         window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(urlShare)}`, 'Compartir en Facebook', 'width=600,height=400');
+         break;
+      }
+       case 'twiiter':{
+         window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(urlShare)}`, 'Compartir en Twitter', 'width=600,height=400');
+         break;
+        }
+        case 'linkedin':{
+          window.open(`https://www.linkedin.com/shareArticle?url=${encodeURIComponent(urlShare)}`, 'Compartir en LinkedIn', 'width=600,height=400');
+          break;
+        }
+      }
   }
 
-  btnFace?.addEventListener('click', handleShare)
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+  iconRedes.forEach((icon)=>{
+      icon.addEventListener('click', handleClick);
+  })   
+})
+
 
 </script>
